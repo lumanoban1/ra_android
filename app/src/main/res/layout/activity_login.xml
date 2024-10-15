@@ -20,11 +20,9 @@
             android:layout_width="match_parent"
             android:layout_height="228dp"
             android:background="@drawable/fondo_imagen"
-            android:contentDescription="@string/todo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/industria"
-
+            android:src="@drawable/industria"
             android:visibility="visible"/>
 
     </LinearLayout>
@@ -43,10 +41,7 @@
             android:gravity="center"
             android:hint="@string/usuario"
             android:inputType="textEmailAddress"
-            android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            android:textColor="@color/white" />
     </LinearLayout>
 
     <LinearLayout
@@ -71,14 +66,13 @@
     </LinearLayout>
 
 
-    <Button
-        android:id="@+id/buttonLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="150dp"
-        android:layout_marginTop="50dp"
-        android:layout_gravity="center"
-        android:text= "@string/ingresar"/>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/ingresar"/>
 
 
 

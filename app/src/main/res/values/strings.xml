@@ -8,5 +8,8 @@
     <string name="db_url">jdbc:mysql://20.122.144.190:1433/test_ra_bd</string>
     <string name="db_username">usr_ana</string>
     <string name="db_password">pwd_ana</string>
+    <string name="deteccion">DETECCIÓN</string>
+    <string name="qr">QR</string>
+    <string name="reconocimiento">RECONOCIMIENTO</string>
 </resources>
 

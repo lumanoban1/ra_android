@@ -1,14 +1,21 @@
 package com.surendramaran.yolov8tflite;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.BitmapShader;
+import android.graphics.Shader;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+import android.widget.ImageView;
+import android.graphics.drawable.Drawable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
@@ -29,6 +36,7 @@ public class Login extends AppCompatActivity implements Response.Listener<JSONOb
 
     EditText editUsuario , editTextPassword;
     Button buttonLogin;
+    private ImageView imageView;
     RequestQueue request; //Aqui seleccionar la ultima opcion "ADD dependencies..."
     JsonObjectRequest jsonObjectRequest;
     ProgressDialog progreso;
@@ -36,6 +44,8 @@ public class Login extends AppCompatActivity implements Response.Listener<JSONOb
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+
 
         editUsuario = findViewById(R.id.editUsuario);
         editTextPassword = findViewById(R.id.editTextPassword);
@@ -53,7 +63,7 @@ public class Login extends AppCompatActivity implements Response.Listener<JSONOb
             }
         });
 
-
+        imageView.setImageResource(R.drawable.fondo_imagen);
         }
 
     private void cargarWebService() {
@@ -91,8 +101,6 @@ public class Login extends AppCompatActivity implements Response.Listener<JSONOb
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-
 
     }
 

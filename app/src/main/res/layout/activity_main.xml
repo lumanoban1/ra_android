@@ -64,28 +64,46 @@
         app:layout_constraintRight_toRightOf="parent"
         android:weightSum="2">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
         <Button
             android:id="@+id/resetZoomButton"
             android:layout_width= "0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:text="Reset"
             android:layout_weight="1"
             tools:ignore="MissingConstraints"
             android:orientation="horizontal"
             android:gravity="center_horizontal"
+            android:background="@drawable/rectangulo"
             android:layout_marginRight="2dp" />
+
+            <Button
+                android:id="@+id/MenuPrincipal"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rectangulo"
+                android:gravity="center"
+                android:text="@string/menu_principal"
+                android:textSize="15sp"
+                android:visibility="gone"
+                android:textStyle="bold" />
 
         <Button
             android:id="@+id/zoomButton"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:text="Zoom"
             android:layout_weight="1"
             android:layout_margin="16dp"
             tools:ignore="MissingConstraints"
+            android:background="@drawable/rectangulo"
             android:layout_marginRight="2dp"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 

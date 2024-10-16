@@ -11,5 +11,8 @@
     <string name="deteccion">DETECCIÓN</string>
     <string name="qr">QR</string>
     <string name="reconocimiento">RECONOCIMIENTO</string>
+    <string name="menu_principal">Menu Principal</string>
+    <string name="reset">RESET</string>
+    <string name="zoom">Zoom</string>
 </resources>
 

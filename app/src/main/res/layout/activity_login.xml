@@ -3,34 +3,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/gradiente_inicio"
     tools:context=".Login">
 
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="292dp">
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="90dp"
+
+        android:gravity="center">
 
         <ImageView
 
-            android:id="@+id/imageView"
+            android:id="@+id/imageLogin"
             android:layout_width="match_parent"
-            android:layout_height="228dp"
-            android:background="@drawable/fondo_imagen"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/industria"
-            android:visibility="visible"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="200dp"
         android:layout_height="60dp"
+        android:layout_marginTop="80dp"
         android:layout_gravity="center"
         android:orientation="horizontal">
 
@@ -40,6 +45,7 @@
             android:layout_height="42dp"
             android:gravity="center"
             android:hint="@string/usuario"
+            android:background="@drawable/rectangulo"
             android:inputType="textEmailAddress"
             android:textColor="@color/white" />
     </LinearLayout>
@@ -56,6 +62,7 @@
             android:layout_height="42dp"
             android:gravity="center"
             android:textColor="@color/white"
+            android:background="@drawable/rectangulo"
             android:hint="@string/contrase_a"
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
@@ -68,10 +75,12 @@
 
 
         <Button
+            android:id="@+id/buttonLogin"
             android:layout_width="150dp"
             android:layout_gravity="center"
             android:layout_height="50dp"
             android:layout_marginTop="50dp"
+            android:background="@drawable/rectangulo"
             android:text="@string/ingresar"/>
 
 

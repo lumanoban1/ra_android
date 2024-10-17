@@ -3,8 +3,6 @@ package com.surendramaran.yolov8tflite
 import android.content.Context
 import android.graphics.Bitmap
 import android.os.SystemClock
-import android.widget.Button
-import androidx.core.view.isVisible
 import com.surendramaran.yolov8tflite.databinding.ActivityMainBinding
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.Interpreter

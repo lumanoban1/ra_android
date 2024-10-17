@@ -6,8 +6,8 @@
     android:id="@+id/menu_deteccion"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradiente_inicio"
     android:orientation="vertical"
+    android:background="@drawable/gradiente_inicio"
     tools:context=".MenuDeteccion">
 
     <TextView
@@ -22,56 +22,93 @@
         android:textSize="30dp" />
 
     <LinearLayout
-        android:layout_marginTop="100dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
         android:orientation="horizontal">
 
-
-        <TextView
-            android:layout_width="188dp"
+        <LinearLayout
+            android:layout_width="164dp"
             android:layout_height="50dp"
-            android:gravity="center"
-            android:text="@string/qr"
-            android:textSize="20sp"
-            android:background="@drawable/rectangulo"
-            android:textStyle="bold" />
+            android:layout_marginEnd="12dp"
+            android:gravity="center">
 
-        <TextView
-            android:layout_width="182dp"
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rectangulo"
+                android:gravity="center"
+                android:text="@string/qr"
+                android:textColor="@color/green2"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="170dp"
             android:layout_height="50dp"
-            android:background="@drawable/rectangulo"
-            android:gravity="center"
-            android:text="@string/deteccion"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:layout_marginStart="9dp"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rectangulo"
+                android:gravity="center"
+                android:textColor="@color/green2"
+                android:text="@string/deteccion"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="140dp"
+        android:layout_gravity="center"
         android:layout_marginLeft="20dp"
+
         android:layout_marginRight="20dp"
-        android:background="@drawable/rectangulo"
+        android:gravity="center"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/imageQR"
-            android:layout_width="187dp"
-            android:layout_height="146dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/qr" />
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="140dp"
+            android:gravity="center">
 
-        <ImageButton
-            android:id="@+id/imageRA"
-            android:layout_width="183dp"
-            android:layout_height="146dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ra" />
+            <ImageButton
+                android:id="@+id/imageQR"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="@drawable/rectangulo"
+                android:scaleType="centerCrop"
+                android:src="@drawable/qr" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="140dp">
+
+            <ImageButton
+                android:id="@+id/imageRA"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/rectangulo"
+                android:src="@drawable/ra" />
+
+
+        </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>

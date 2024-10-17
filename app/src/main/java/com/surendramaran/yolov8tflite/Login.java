@@ -1,13 +1,7 @@
 package com.surendramaran.yolov8tflite;
 
-import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.BitmapShader;
-import android.graphics.Shader;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.ImageView;
-import android.graphics.drawable.Drawable;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
@@ -30,8 +24,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.surendramaran.yolov8tflite.Entidades.Usuario;
-import com.surendramaran.yolov8tflite.Util.MiVariableGlobal;
-import com.surendramaran.yolov8tflite.Util.Utils;
+
 public class Login extends AppCompatActivity implements Response.Listener<JSONObject>, Response.ErrorListener {
 
     EditText editUsuario , editTextPassword;

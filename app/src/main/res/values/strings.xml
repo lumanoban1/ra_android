@@ -14,5 +14,17 @@
     <string name="menu_principal">Menu Principal</string>
     <string name="reset">RESET</string>
     <string name="zoom">Zoom</string>
+    <string name="men_t4_0330_wr_00708_c1e2a">Menú T4-0330-WR-00708-C1E2A</string>
+    <string name="t200_rh_003">T200-RH-003</string>
+    <string name="t210_rh_002">T210-RH-002</string>
+    <string name="v2010_v_101">V2010-V-101</string>
+    <string name="v2010_v_102">V2010-V-102</string>
+    <string name="v2010_v_110">V2010-V-110</string>
+    <string name="v2010_v_111">V2010-V-111</string>
+    <string name="v2010_v_120">V2010-V-120</string>
+    <string name="v2011_v_251">V2011-V-251</string>
+    <string name="documentaci_n">DOCUMENTACIÓN</string>
+    <string name="inspecci_n">INSPECCIÓN</string>
+    <string name="mantenimiento">MANTENIMIENTO</string>
 </resources>
 

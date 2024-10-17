@@ -1,7 +1,5 @@
 package com.surendramaran.yolov8tflite;
 
-import android.content.Intent;
-
 /*public class SaveData1 {
     private Integer id,
     private String parametro1,

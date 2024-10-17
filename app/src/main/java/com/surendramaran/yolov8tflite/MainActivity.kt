@@ -7,7 +7,6 @@ import android.graphics.Matrix
 import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
-import android.widget.Button
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.AspectRatio
@@ -23,7 +22,6 @@ import androidx.core.view.isVisible
 import com.surendramaran.yolov8tflite.Constants.LABELS_PATH
 import com.surendramaran.yolov8tflite.Constants.MODEL_PATH
 import com.surendramaran.yolov8tflite.databinding.ActivityMainBinding
-import org.w3c.dom.Text
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
@@ -259,35 +257,38 @@ class MainActivity : AppCompatActivity(), Detector.DetectorListener {
                         binding.btn5,
                         binding.btn6,
                         binding.btn7,
-                        /*binding.btn8,
+                        binding.btn8,
                         binding.btn9,
-                        binding.btn10*/
+                        binding.btn10
                     )
                     val labels = listOf(
-                        "GRH-001",
-                        "T2-0520-TL-00302-L1E0VJ",
-                        "T3-0330-WG-02414-C1E2A",
                         "T4-0330-WR-00708-C1E2A",
-                        "T200-RH-001",
                         "T200-RH-003",
-                        "T210-RH-002"
+                        "T210-RH-002",
+                        "V2010-V-101",
+                        "V2010-V-102",
+                        "V2010-V-110",
+                        "V2010-V-111",
+                        "V2010-V-120",
+                        "V2011-V-251",
+                        "V2011-V-255"
                     )
 
 
-                    if (box != null) {
-                        if (className in labels) {
-                            for (button in buttons) {
-                                button.isVisible = button.text == className
-                            }
-                        } else {
-                            for (button in buttons) {
-                                button.isVisible = false
-
-
-                            }
+                    if (className in labels) {
+                        for (button in buttons) {
+                            button.isVisible = button.text == className
                         }
+                    } else {
+                        for (button in buttons) {
+                            button.isVisible = false
 
+
+                        }
                     }
+
+
+
 
                 }
 

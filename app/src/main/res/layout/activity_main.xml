@@ -7,52 +7,52 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <androidx.camera.view.PreviewView
+        android:id="@+id/view_finder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:scaleType="fillStart" />
 
+    <com.surendramaran.yolov8tflite.OverlayView
+        android:id="@+id/overlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:translationZ="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/inferenceTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="100ms" />
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-92dp">
 
-        <androidx.camera.view.PreviewView
-            android:id="@+id/view_finder"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="3:4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5"
-            app:scaleType="fillStart" />
 
-        <com.surendramaran.yolov8tflite.OverlayView
-            android:id="@+id/overlay"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:translationZ="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="3:4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5" />
-
-        <TextView
-            android:id="@+id/inferenceTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="32dp"
-            android:textColor="@color/white"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="100ms" />
 
         <FrameLayout
-            android:id="@+id/menuPrincipal"
+            android:id="@+id/menuDocumentacion"
             android:layout_width="350dp"
             android:layout_height="502dp"
             android:layout_gravity="center"
@@ -71,77 +71,239 @@
                     android:layout_marginLeft="310dp"
                     android:background="@mipmap/close" />
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:gravity="center"
-                android:layout_height="60dp"
-                android:layout_marginTop="80dp">
-
-                <Button
-                    android:layout_width="250dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/rectangulo"
-                    android:gravity="center"
-                    android:text="@string/documentaci_n" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:gravity="center"
-                android:layout_height="60dp"
-                android:layout_marginTop="160dp">
+                android:layout_width="200dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="50dp">
 
-                <Button
-                    android:layout_width="250dp"
-                    android:layout_height="50dp"
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="@string/documentaci_nTitu"
                     android:background="@drawable/rectangulo"
                     android:gravity="center"
-                    android:text="DATOS - TIEMPO REAL" />
+                    android:textColor="@color/white"
+                    android:layout_height="match_parent"/>
 
             </LinearLayout>
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:gravity="center"
-                android:layout_height="60dp"
-                android:layout_marginTop="240dp">
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rectangulo"
+                android:layout_height="380dp">
 
-                <Button
-                    android:layout_width="250dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/rectangulo"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:gravity="center"
-                    android:text="@string/inspecci_n" />
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp">
 
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:gravity="center"
-                android:layout_height="60dp"
-                android:layout_marginTop="320dp">
+                    <Button
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rectangulo"
+                        android:gravity="center"
+                        android:text="@string/inspecciones_anteriores" />
 
-                <Button
-                    android:layout_width="250dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/rectangulo"
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:gravity="center"
-                    android:text="@string/mantenimiento" />
+                    android:layout_height="60dp"
+                    android:layout_marginTop="90dp">
 
-            </LinearLayout>
+                    <Button
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rectangulo"
+                        android:gravity="center"
+                        android:text="@string/informaci_n_del_equipo" />
 
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="160dp">
+
+                    <Button
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rectangulo"
+                        android:gravity="center"
+                        android:text="@string/planos" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="230dp">
+
+                    <Button
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rectangulo"
+                        android:gravity="center"
+                        android:text="@string/videos" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="300dp">
+
+                    <Button
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rectangulo"
+                        android:gravity="center"
+                        android:text="@string/despieces" />
+
+                </LinearLayout>
+
+
+
+
+
+
+            </FrameLayout>
 
 
         </FrameLayout>
 
         <FrameLayout
-            android:id="@+id/loginMenu"
+            android:id="@+id/menuPrincipal"
             android:layout_width="350dp"
             android:layout_height="502dp"
             android:layout_gravity="center"
             android:visibility="visible"
+            android:background="@drawable/gradiente_inicio">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="310dp"
+                    android:background="@mipmap/close" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="MENÚ EQUIPO"
+                    android:background="@drawable/rectangulo"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rectangulo"
+                android:layout_height="380dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rectangulo"
+                        android:gravity="center"
+                        android:text="@string/documentaci_n" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="90dp">
+
+                    <Button
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rectangulo"
+                        android:gravity="center"
+                        android:text="@string/datos_en_tiempo_real" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="160dp">
+
+                    <Button
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rectangulo"
+                        android:gravity="center"
+                        android:text="@string/inspecci_n" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="230dp">
+
+                    <Button
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rectangulo"
+                        android:gravity="center"
+                        android:text="@string/mantenimiento" />
+
+                </LinearLayout>
+
+
+
+
+            </FrameLayout>
+
+
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/loginMenu"
+            android:layout_width="350dp"
+            android:layout_height="502dp"
+            android:layout_gravity="center"
+            android:visibility="invisible"
             android:background="@drawable/gradiente_inicio">
 
             <LinearLayout
@@ -152,11 +314,11 @@
 
             <ImageButton
                 android:layout_marginTop="25dp"
-                android:layout_width="100dp"
+                android:layout_width="110dp"
                 android:layout_gravity="center"
-                android:layout_height="100dp"
+                android:layout_height="130dp"
                 android:layout_marginLeft="120dp"
-                android:background="@mipmap/close" />
+                android:background="@mipmap/boton_login" />
             </LinearLayout>
 
             <LinearLayout
@@ -214,7 +376,127 @@
         </FrameLayout>
 
 
+        <FrameLayout
+            android:id="@+id/menuReconocimiento"
+            android:layout_width="350dp"
+            android:layout_height="502dp"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:background="@drawable/gradiente_inicio">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="60sp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rectangulo"
+                    android:gravity="center"
+                    android:text="@string/reconocimiento"
+                    android:textColor="@color/green2"
+                    android:textSize="25dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="164dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="0dp"
+                    android:gravity="center">
+
+                    <Button
+                        android:layout_width="140dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rectangulo"
+                        android:gravity="center"
+                        android:text="@string/qr"
+                        android:textColor="@color/green2"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="170dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="0dp"
+                    android:gravity="center">
+
+                    <Button
+                        android:layout_width="140dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/rectangulo"
+                        android:gravity="center"
+                        android:textColor="@color/green2"
+                        android:text="@string/deteccion"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="140dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_height="140dp"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/imageQR"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rectangulo"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/qrrec" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="140dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_height="140dp">
+
+                    <ImageButton
+                        android:id="@+id/imageRA"
+                        android:layout_width="140dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/rectangulo"
+                        android:src="@mipmap/objectrec" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
     </FrameLayout>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -229,14 +511,14 @@
 
         <LinearLayout
             android:layout_width="96dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="12dp"
             android:layout_height="match_parent">
 
             <ImageButton
 
                 android:id="@+id/resetZoomButton"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:background="@mipmap/reset_zoom"
                 android:gravity="center"
@@ -252,7 +534,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/MenuPrincipal"
+                android:id="@+id/btnMenuPrincipal"
                 android:layout_width="170dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -270,10 +552,10 @@
                 android:layout_gravity="center"
                 android:background="@drawable/rectangulo"
                 android:gravity="center"
-                android:text="@string/men_t4_0330_wr_00708_c1e2a"
+                android:text="@string/t4_0330_wr_00708_c1e2a"
                 android:textSize="9.7sp"
                 android:textStyle="bold"
-                android:visibility="invisible"
+                android:visibility="visible"
                 tools:ignore="SmallSp" />
 
             <Button
@@ -401,9 +683,9 @@
             android:layout_height="match_parent">
 
             <ImageButton
-                android:id="@+id/ZoomButton"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:id="@+id/zoomButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:background="@mipmap/zoom"
                 android:gravity="center"

@@ -26,5 +26,15 @@
     <string name="documentaci_n">DOCUMENTACIÓN</string>
     <string name="inspecci_n">INSPECCIÓN</string>
     <string name="mantenimiento">MANTENIMIENTO</string>
+    <string name="inspecciones_anteriores">INSPECCIONES ANTERIORES</string>
+    <string name="informaci_n_del_equipo">INFORMACIÓN DEL EQUIPO</string>
+    <string name="planos">PLANOS</string>
+    <string name="videos">VIDEOS</string>
+    <string name="documentaci_nTitulo">DOCUMENTACIÓN</string>
+    <string name="documentaci_nTitul">DOCUMENTACIÓN</string>
+    <string name="documentaci_nTitu">DOCUMENTACIÓN</string>
+    <string name="despieces">DESPIECES</string>
+    <string name="datos_en_tiempo_real">DATOS EN TIEMPO REAL</string>
+    <string name="t4_0330_wr_00708_c1e2a">T4-0330-WR-00708-C1E2A</string>
 </resources>
 

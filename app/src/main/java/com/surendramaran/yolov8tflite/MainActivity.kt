@@ -1,12 +1,15 @@
 package com.surendramaran.yolov8tflite
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Matrix
 import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
+import android.widget.Button
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.AspectRatio
@@ -40,6 +43,7 @@ class MainActivity : AppCompatActivity(), Detector.DetectorListener {
     private val zoomStep = 0.1f
     private var cameraProvider: ProcessCameraProvider? = null
     private lateinit var detector: Detector
+    open var buttons: btn1,
 
     private lateinit var cameraExecutor: ExecutorService
 
@@ -57,6 +61,7 @@ class MainActivity : AppCompatActivity(), Detector.DetectorListener {
         "V2011-V-255" to binding.btn10
     )*/
 
+    @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -72,6 +77,9 @@ class MainActivity : AppCompatActivity(), Detector.DetectorListener {
         }
 
         cameraExecutor = Executors.newSingleThreadExecutor()
+
+
+
     }
 
     private fun startCamera() {
@@ -297,6 +305,8 @@ class MainActivity : AppCompatActivity(), Detector.DetectorListener {
         }
 
     }
+
+
 
 
     override fun onClearDetection(){

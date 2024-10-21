@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity(), Detector.DetectorListener {
     private val zoomStep = 0.1f
     private var cameraProvider: ProcessCameraProvider? = null
     private lateinit var detector: Detector
-    open var buttons: btn1,
+
 
     private lateinit var cameraExecutor: ExecutorService
 

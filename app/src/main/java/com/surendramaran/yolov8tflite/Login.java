@@ -40,7 +40,7 @@ public class Login extends AppCompatActivity implements Response.Listener<JSONOb
 
 
 
-        editUsuario = findViewById(R.id.editUsuario);
+        editUsuario = findViewById(R.id.editTextUsuario);
         editTextPassword = findViewById(R.id.editTextPassword);
         buttonLogin = findViewById(R.id.buttonLogin);
 

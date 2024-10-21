@@ -5,7 +5,7 @@
     <string name="usuario">Usuario</string>
     <string name="contrase_a">Contraseña</string>
     <string name="ingresar">Ingresar</string>
-    <string name="db_url">jdbc:mysql://20.122.144.190:1433/test_ra_bd</string>
+    <string name="db_url">jdbc:mysql://16.0.1000.6:1433/test_ra_bd</string>
     <string name="db_username">usr_ana</string>
     <string name="db_password">pwd_ana</string>
     <string name="deteccion">DETECCIÓN</string>
@@ -36,5 +36,8 @@
     <string name="despieces">DESPIECES</string>
     <string name="datos_en_tiempo_real">DATOS EN TIEMPO REAL</string>
     <string name="t4_0330_wr_00708_c1e2a">T4-0330-WR-00708-C1E2A</string>
+    <string name="men_equipo2">MENÚ EQUIPO2</string>
+    <string name="men_documentaci_n">MENÚ DOCUMENTACIÓN</string>
+    <string name="men_detecci_n">MENÚ DETECCIÓN</string>
 </resources>
 

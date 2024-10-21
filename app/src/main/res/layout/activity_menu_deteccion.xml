@@ -1,114 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/menu_deteccion"
+    android:id="@+id/deteccion"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/gradiente_inicio"
-    tools:context=".MenuDeteccion">
+    tools:context=".Deteccion">
 
-    <TextView
-        android:layout_width="300dp"
-        android:layout_height="50sp"
+    <FrameLayout
+        android:id="@+id/menuReconocimiento"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_marginTop="130dp"
-        android:gravity="center"
-        android:text="@string/reconocimiento"
-        android:textColor="@color/green2"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="120dp"
         android:background="@drawable/rectangulo"
-        android:textSize="30dp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginRight="20dp"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:visibility="visible"
+        >
 
         <LinearLayout
-            android:layout_width="164dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="12dp"
-            android:gravity="center">
-
-            <Button
-                android:layout_width="140dp"
-                android:layout_height="50dp"
-                android:background="@drawable/rectangulo"
-                android:gravity="center"
-                android:text="@string/qr"
-                android:textColor="@color/green2"
-                android:textStyle="bold" />
-
-        </LinearLayout>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:weightSum="2">
 
 
-        <LinearLayout
-            android:layout_width="170dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="9dp"
-            android:gravity="center">
 
-            <Button
-                android:layout_width="140dp"
-                android:layout_height="50dp"
-                android:background="@drawable/rectangulo"
-                android:gravity="center"
-                android:textColor="@color/green2"
-                android:text="@string/deteccion"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="140dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="20dp"
-
-        android:layout_marginRight="20dp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="150dp"
-            android:layout_marginRight="20dp"
-            android:layout_height="140dp"
-            android:gravity="center">
-
-            <ImageButton
-                android:id="@+id/imageQR"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:background="@drawable/rectangulo"
-                android:scaleType="centerCrop"
-                android:src="@drawable/qr" />
+                android:layout_height="0dp"
+                android:layout_weight="0.15"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/rectangulo"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:hint="@string/reconocimiento"
+                    android:textStyle="bold"
+                    tools:ignore="NestedWeights" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="120dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="0.8"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:background="@drawable/rectangulo"
+                    tools:ignore="NestedWeights">
+
+                    <Button
+                        android:id="@+id/btnDteccionQr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rectangulo"
+                        android:gravity="center"
+                        android:hint="@string/qr"
+                         />
+                    <LinearLayout
+                        android:id="@+id/btnDteccionQrImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1">
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@mipmap/image_qrbutton2"
+                            android:scaleType="fitXY"
+                            android:layout_gravity="center"
+                            tools:ignore="NestedWeights" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/rectangulo"
+                    tools:ignore="NestedWeights">
+
+                    <Button
+                        android:id="@+id/btnDteccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rectangulo"
+                        android:gravity="center"
+
+                        android:hint="@string/deteccion"
+                        />
+                    <ImageButton
+                        android:id="@+id/btnDteccionImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@mipmap/image_deteccionbutton2"
+                        android:scaleType="centerCrop"
+                        tools:ignore="NestedWeights" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
         </LinearLayout>
+    </FrameLayout>
 
-        <LinearLayout
-            android:layout_width="150dp"
-            android:layout_marginLeft="20dp"
-            android:layout_height="140dp">
-
-            <ImageButton
-                android:id="@+id/imageRA"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:scaleType="centerCrop"
-                android:background="@drawable/rectangulo"
-                android:src="@drawable/ra" />
-
-
-        </LinearLayout>
-
-    </LinearLayout>
 </LinearLayout>
